@@ -4,22 +4,22 @@
 Lisp has been called "the most intelligent way to misuse a computer". Check out this elegant solution to a Common Lisp programming issue:
 
 ```lisp
-[25]> (SETQ *PRINT-CASE* :CAPITALIZE)
+[25]> (SETQ *PRINT-CASE* :CAPITALIZE)         ; Weird ugly Lisp :Output
 :Capitalize
-[26]> (DEFPARAMETER CAPITALIZE 'CAPITALIZE)
+[26]> (DEFPARAMETER CAPITALIZE 'CAPITALIZE)   ; Remove the annoying colon
 Capitalize
-[27]> (DEFMACRO CAPITALIZE(&BODY BODY)  
+[27]> (DEFMACRO CAPITALIZE(&BODY BODY)        ; Apply it to everything
 "CAPITALIZE 
 (DECLARE(IGNORE BODY)))
 (CAPITALIZE NIL) 
 Nil"       
 (DECLARE(IGNORE BODY)))
 Capitalize
-[28]> (capitalize nil)
+[28]> (capitalize nil)            ; Test 1
 Nil
-[29]> (EVAL CAPITALIZE)
+[29]> (EVAL CAPITALIZE)           ; Test 2
 Capitalize
-[30]> (FORMAT T "~S" capitalize)  ; It works! ;)
+[30]> (FORMAT T "~S" capitalize)  ; Test 3   It works!
 Capitalize
 Nil
 [31]> 
