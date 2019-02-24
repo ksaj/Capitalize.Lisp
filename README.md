@@ -8,12 +8,12 @@ Lisp has been called "the most intelligent way to misuse a computer". Check out 
 :Capitalize
 [26]> (DEFPARAMETER CAPITALIZE 'CAPITALIZE)   ; Remove the annoying colon
 Capitalize
-[27]> (DEFMACRO CAPITALIZE(&BODY BODY)        ; Apply it to everything
+[27]> (DEFMACRO CAPITALIZE(&COLON COLON)      ; Apply it to everything
 "CAPITALIZE 
-(DECLARE(IGNORE BODY)))
+(DECLARE(IGNORE COLON)))
 (CAPITALIZE NIL) 
 Nil"       
-(DECLARE(IGNORE BODY)))
+(DECLARE(IGNORE COLON)))
 Capitalize
 [28]> (capitalize nil)            ; Test 1
 Nil
